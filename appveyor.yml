@@ -53,6 +53,7 @@ install:
     # Add path, activate `conda` and update conda.
     - cmd: call %CONDA_INSTALL_LOCN%\Scripts\activate.bat
     - cmd: conda update --yes --quiet conda
+    - cmd: conda clean --all
 
     - cmd: set PYTHONUNBUFFERED=1
 
