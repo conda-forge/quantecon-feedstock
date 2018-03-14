@@ -1,5 +1,5 @@
-{% set version = "0.3.7" %}
-{% set sha256 = "227c97e524b92e2cce7ba68927334b43147c50f494be9694f545854ef9608660" %}
+{% set version = "0.3.8.1" %}
+{% set sha256 = "1b844a53ab1b5e06ce26569015cc3a4ecdc3052b35ec2651ce6df0d21c16e7f8" %}
 
 package:
   name: quantecon
