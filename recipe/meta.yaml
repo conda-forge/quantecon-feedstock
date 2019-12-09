@@ -1,5 +1,5 @@
-{% set version = "0.4.5" %}
-{% set sha256 = "ec2d617180f4cf2129660f44370437a1fbc942cc1f4a8c439c8ee1b36d0ca4d2" %}
+{% set version = "0.4.6" %}
+{% set sha256 = "4bf07005b390d779891d9b944f6a5559bf7570f0eedd34b329c495d69a27da4d" %}
 
 package:
   name: quantecon
@@ -12,7 +12,7 @@ source:
 
 build:
   number: 0
-  script: python setup.py install
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: True  # [py<35]
 
 requirements:
@@ -44,6 +44,7 @@ test:
 about:
   home: https://github.com/QuantEcon/QuantEcon.py
   license: BSD-3-Clause
+  license_file: LICENSE.txt
   summary: 'QuantEcon is a package to support all forms of quantitative economic modelling.'
   description: |
     **QuantEcon** is an organization run by economists for economists with the aim of coordinating
