@@ -11,8 +11,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 1
+  script: python setup.py install
   skip: True  # [py<35]
 
 requirements:
@@ -23,7 +23,7 @@ requirements:
     - python
     - numpy
     - scipy
-    - matplotlib
+    - matplotlib-base
     - pandas
     - sympy
     - numba
@@ -44,7 +44,6 @@ test:
 about:
   home: https://github.com/QuantEcon/QuantEcon.py
   license: BSD-3-Clause
-  license_file: LICENSE.txt
   license_file: LICENSE.txt
   summary: 'QuantEcon is a package to support all forms of quantitative economic modelling.'
   description: |
