@@ -1,48 +1,41 @@
+{% set name = "quantecon" %}
 {% set version = "0.5.3" %}
-{% set sha256 = "279f94ddae910aaecaa5ed5b34affb8400d5836f37aff212adce53797edf5013" %}
 
 package:
   name: quantecon
   version: {{ version }}
 
 source:
-  fn: QuantEcon.py-{{ version }}.tar.gz
-  url: https://github.com/QuantEcon/QuantEcon.py/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quantecon-{{ version }}.tar.gz
+  sha256: ff9f4378069ff5713d3d8ce8efaa123b24910cb1a2eb69b4bba4735ff08f2768
 
 build:
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: true  # [py<35]
 
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
     - pip
+    - python >=3.7
   run:
-    - python
-    - numpy
-    - scipy
-    - matplotlib-base
-    - pandas
-    - sympy
     - numba
+    - numpy
+    - python >=3.7
     - requests
-    - nose
-    - pytables
-
+    - scipy >=1.0.0
+    - sympy
 
 test:
   imports:
     - quantecon
-    - quantecon.tests
-    - quantecon.game_theory
-    - quantecon.markov
-    - quantecon.random
-    - quantecon.util
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/QuantEcon/QuantEcon.py
