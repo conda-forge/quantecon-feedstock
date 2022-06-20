@@ -15,9 +15,6 @@ build:
   number: 0
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - pip
     - python >=3.7
@@ -41,7 +38,7 @@ test:
 about:
   home: https://github.com/QuantEcon/QuantEcon.py
   license: BSD-3-Clause
-  license_file: LICENSE.txt
+  license_file: LICENSE
   summary: QuantEcon is a package to support all forms of quantitative economic modelling.
   description: |
     **QuantEcon** is an organization run by economists for economists with the aim of coordinating
