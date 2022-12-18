@@ -1,5 +1,5 @@
 {% set name = "quantecon" %}
-{% set version = "0.5.3" %}
+{% set version = "0.6.0" %}
 
 package:
   name: quantecon
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quantecon-{{ version }}.tar.gz
-  sha256: ff9f4378069ff5713d3d8ce8efaa123b24910cb1a2eb69b4bba4735ff08f2768
+  sha256: c5c7ed1b9512894fbc9fb8bc4ae6fd4ac5dded50d32a000c28f6d02826133a40
 
 build:
   noarch: python
@@ -21,10 +21,10 @@ requirements:
     - flit-core >=3.5,<4
   run:
     - numba
-    - numpy
+    - numpy >=1.17.0
     - python >=3.7
     - requests
-    - scipy >=1.0.0
+    - scipy >=1.5.0
     - sympy
 
 test:
