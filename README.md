@@ -1,11 +1,11 @@
-About quantecon
-===============
+About quantecon-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/quantecon-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/QuantEcon/QuantEcon.py
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/quantecon-feedstock/blob/main/LICENSE.txt)
 
 Summary: QuantEcon is a package to support all forms of quantitative economic modelling.
 
