@@ -1,5 +1,5 @@
 {% set name = "quantecon" %}
-{% set version = "0.11.0" %}
+{% set version = "0.11.1" %}
 
 package:
   name: quantecon
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/quantecon-{{ version }}.tar.gz
-  sha256: 41f9c539adf3df20880dc229615f6e6dfca088d17ef763cbc00456d34ce4865a
+  sha256: 8a2a195d217aa4996810eae1d5230137d3c7c23f83c58c6208a73491ca004989
 
 build:
   noarch: python
