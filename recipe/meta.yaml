@@ -1,5 +1,6 @@
 {% set name = "quantecon" %}
 {% set version = "0.13.1" %}
+{% set python_min = "3.12" %}
 
 package:
   name: quantecon
@@ -17,15 +18,13 @@ build:
 requirements:
   host:
     - pip
-    - python {{ python_min }}
+    - python {{ python_min }}.*
     - flit-core >=3.5,<4
   run:
     - numba >=0.56.0
     - numpy >=1.17.0
     - python >={{ python_min }}
-    - requests
     - scipy >=1.5.0
-    - sympy
 
 test:
   imports:
@@ -34,7 +33,7 @@ test:
     - pip check
   requires:
     - pip
-    - python {{ python_min }}
+    - python {{ python_min }}.*
 
 about:
   home: https://github.com/QuantEcon/QuantEcon.py
